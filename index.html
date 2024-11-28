@@ -84,6 +84,21 @@
         </div>
 
         <div class="updates">
+             <div class="update">
+                <div class="timestamp">16:15</div>
+                <p>La paziente non è ancora rientrata in reparto.</p>
+                <button onclick="toggleInfo()" class="info-button" id="infoBtn">Maggiori informazioni sulla procedura chirurgica ▼</button>
+                <div id="infoContent" class="info-content">
+                    <p>La microdiscectomia è una procedura chirurgica minimamente invasiva che viene eseguita per rimuovere il materiale di un disco intervertebrale erniato che sta comprimendo un nervo spinale.</p>
+                    <p>L'intervento prevede:</p>
+                    <p>- Anestesia generale per il massimo comfort del paziente<br>
+                    - Piccola incisione sulla schiena (2-4 cm)<br>
+                    - Utilizzo di microscopio chirurgico per massima precisione<br>
+                    - Rimozione del materiale discale erniato<br>
+                    - Verifica della decompressione del nervo</p>
+                    <p>La durata standard è di 1-2 ore, seguita da un'ora di osservazione in sala risveglio. La mobilizzazione inizia generalmente entro 24 ore, secondo indicazioni del chirurgo.</p>
+                </div>
+            </div>
             <div class="update operation">
                 <div class="timestamp">14:02</div>
                 <p>La paziente è stata accompagnata in sala operatoria, mostrando un atteggiamento sereno. Manda un saluto a tutti i familiari prima di entrare. Il rientro in reparto è previsto entro le 17:00.</p>
@@ -143,6 +158,19 @@
             Ultimo aggiornamento: 28/11/2024 14:10
         </div>
     </div>
+    <script>
+        function toggleInfo() {
+            var content = document.getElementById("infoContent");
+            var button = document.getElementById("infoBtn");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                button.innerHTML = "Maggiori informazioni sulla procedura chirurgica ▼";
+            } else {
+                content.style.display = "block";
+                button.innerHTML = "Maggiori informazioni sulla procedura chirurgica ▲";
+            }
+        }
+    </script>
 </body>
 </html>
           
