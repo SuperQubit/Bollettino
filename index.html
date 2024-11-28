@@ -73,6 +73,24 @@
             background-color: #e3f2fd;
             border-left-color: #1976d2;
         }
+        .info-button {
+            color: #0066cc;
+            background: none;
+            border: none;
+            font-size: 0.9em;
+            cursor: pointer;
+            padding: 5px 0;
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+        .info-content {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #0066cc;
+            font-size: 0.9em;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -159,14 +177,20 @@
         </div>
     </div>
     <script>
+        window.onload = function() {
+            document.getElementById('infoContent').style.display = 'none';
+        }
+        
         function toggleInfo() {
             var content = document.getElementById("infoContent");
             var button = document.getElementById("infoBtn");
             if (content.style.display === "block") {
                 content.style.display = "none";
+                content.setAttribute('aria-hidden', 'true');
                 button.innerHTML = "Maggiori informazioni sulla procedura chirurgica ▼";
             } else {
                 content.style.display = "block";
+                content.setAttribute('aria-hidden', 'false');
                 button.innerHTML = "Maggiori informazioni sulla procedura chirurgica ▲";
             }
         }
