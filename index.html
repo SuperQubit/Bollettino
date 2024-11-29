@@ -91,6 +91,29 @@
             font-size: 0.9em;
             display: none;
         }
+        .date-divider {
+        text-align: center;
+        margin: 30px 0;
+        position: relative;
+        background: #fff;
+    }
+    .date-divider::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        border-top: 2px solid #dee2e6;
+        z-index: 1;
+    }
+    .date-divider span {
+        background: #fff;
+        padding: 0 15px;
+        color: #6c757d;
+        position: relative;
+        z-index: 2;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
